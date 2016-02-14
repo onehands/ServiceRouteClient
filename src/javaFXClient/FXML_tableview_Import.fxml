@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import java.lang.String?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.cell.ChoiceBoxTableCell?>
+<?import javafx.scene.control.PasswordField?>
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
+ xmlns:fx="http://javafx.com/fxml" fx:controller="javaFXClient.FXMLTableViewControllerImport">
+ <padding>
+  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+ </padding>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="1">
+  <fx:define>
+   <ToggleGroup fx:id="myToggleGroup" />
+  </fx:define>
+  <children>
+   <RadioButton text="研发" toggleGroup="$myToggleGroup"
+    onMouseClicked="#selectYanfa" selected="true" />
+   <RadioButton text="测试" toggleGroup="$myToggleGroup"
+    onMouseClicked="#selectCeshi" />
+  </children>
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="2">
+  <TextField fx:id="ip" promptText="ip" prefWidth="200"
+   text="192.168.1.61" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="3">
+  <TextField fx:id="username" promptText="用户名" text="betterdev"
+   prefWidth="200" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="4">
+  <PasswordField fx:id="password" promptText="密码" text="better2008"
+   prefWidth="200" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="5">
+  <TextField fx:id="databaseName" promptText="数据库名" prefWidth="200" />
+ </HBox>
+
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="6">
+  <TextField fx:id="tblName" promptText="表名" prefWidth="200" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="7">
+  <TextField fx:id="fldName" promptText="要插入的字段" prefWidth="200" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="8">
+  <TextField fx:id="value" promptText="要插入的值" prefWidth="200" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="9">
+  <Button text="确定" onAction="#importValue" />
+  <Button text="取消" onAction="#cancelImport" />
+ </HBox>
+
+</GridPane> 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.stage.FileChooser?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.RadioButton?>
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
+ xmlns:fx="http://javafx.com/fxml" fx:controller="javaFXClient.FXMLTableViewControllerMain">
+ <padding>
+  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+ </padding>
+ <Label style="-fx-font: NORMAL 15 Tahoma;" text="ServiceRouteHelper"
+  GridPane.columnIndex="0" GridPane.rowIndex="1">
+ </Label>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="2">
+  <TextField fx:id="svc" promptText="契约全名" prefWidth="600" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="3">
+  <TextField fx:id="method" promptText="方法名" prefWidth="600" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="4">
+  <TextField fx:id="serviceAddress" promptText="服务地址"
+   prefWidth="600" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="5">
+  <TextField fx:id="params" promptText="入参，用||隔开" prefWidth="600" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="6">
+  <TextField fx:id="filePath" promptText="jar文件地址" prefWidth="600"
+   editable="false" />
+  <Button text="选择jar文件" onAction="#chooseFile" />
+  <AnchorPane fx:id="layoutPane"></AnchorPane>
+ </HBox>
+
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="7">
+  <Button text="开始调用" onAction="#invokService" />
+  <Button text="清空参数" onAction="#clearParam" />
+  <Button text="清空文本" onAction="#clearText" />
+  <Button text="一键分页" onAction="#pageService" />
+  <Button text="导入内网" onAction="#importData" />
+  <RadioButton fx:id="rb" text="格式化数据">
+  </RadioButton>
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="8">
+  <TextArea fx:id="text" GridPane.columnIndex="0"
+   GridPane.rowIndex="1" prefWidth="600" prefHeight="600" wrapText="true">
+  </TextArea>
+ </HBox>
+
+</GridPane> 

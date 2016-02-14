@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
+ xmlns:fx="http://javafx.com/fxml" fx:controller="javaFXClient.FXMLTableViewControllerPage">
+ <padding>
+  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+ </padding>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="1">
+  <TextField fx:id="applicationName" promptText="系统名"
+   prefWidth="200" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="2">
+  <TextField fx:id="databaseName" promptText="数据库名" prefWidth="200" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="3">
+  <TextField fx:id="dataBaseAddress" promptText="内网测试数据库地址"
+   prefWidth="200" text="192.168.1.70" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="4">
+  <TextField fx:id="bizTime" promptText="bizTime" prefWidth="200" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="5">
+  <TextField fx:id="tblName" promptText="表名" prefWidth="200" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="6">
+  <TextField fx:id="fldName" promptText="要查询的字段" prefWidth="200" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="7">
+  <TextField fx:id="condition" promptText="查询条件" prefWidth="200" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="8">
+  <TextField fx:id="fldSort" promptText="排序条件" prefWidth="200" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="9">
+  <TextField fx:id="pageSize" promptText="数量" prefWidth="200" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="10">
+  <TextField fx:id="sql" promptText="你的sql" prefWidth="200" />
+ </HBox>
+ <HBox spacing="10" alignment="bottom_left" GridPane.columnIndex="0"
+  GridPane.rowIndex="11">
+  <Button text="确定" onAction="#setValue" />
+  <Button text="解析sql" onAction="#fillValue" />
+ </HBox>
+
+</GridPane> 
